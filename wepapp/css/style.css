@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+}
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 1rem;
+}
+.menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.menu a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+.menu a:hover {
+    color: #ffc591;
+    transition: color 0.5s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+}
+.header a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 36px;
+    margin-left: 20px;
+    color: white;
+}
+.header img {
+    width: 30px;
+    height: auto;
+    display: flex;
+    margin: .4rem;
+    cursor: pointer;
+}
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 4rem;
+}
+.search-input {
+    font-size: 18px;
+    width: 100%;
+    padding: .4em;
+    border: none;
+    background: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+input[type=text]:focus {
+	outline: none !important;
+}
+.search-button {
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border: none;
+    background-color: #ccc;
+    transition: background-color 0.5s ease;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+.search-button:hover {
+    background-color: #F0F0F0;
+    transition: background-color 0.5s ease;
+}
+.menu-icons {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    gap: 1.5rem;
+}
+.video-player {
+	background: black;
+}
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem 1rem;
+    padding: 3rem 0;
+    margin: 0 1.5rem;
+    border-top: 4px solid #CCC;
+}
+.video-section:first-child {
+    border-top: none;
+}
+.video-container {
+    display: flex;
+    flex-direction: column;
+}
+.thumbnail {
+    position: relative;
+    display: flex;
+}
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    right: 5px;
+    bottom: 5px;
+    padding: .1em .3em;
+    border-radius: .3em;
+    font-size: .9rem;
+}
+.thumbnail-image {
+    width: 100%;
+    height: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    background-color: #AAA;
+  }
+  
+.video-bottom-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+  
+.channel-icon {
+    margin-right: .75rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #AAA;
+}
+  
+.video-details {
+    display: flex;
+    flex-direction: column;
+}
+  
+.video-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    color: black;
+}
+  
+.video-channel-name {
+    margin-bottom: .1rem;
+    text-decoration: none;
+    transition: color 150ms;
+}
+  
+.video-channel-name:hover {
+    color: #111;
+}
+  
+.video-channel-name, .video-metadata {
+    color: #555;
+}
+  
+.video-section-title {
+    grid-column: 1 / -1;
+    margin: -.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+}
+  
+.video-section-title-close {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 2rem;
+    color: #555;
+    cursor: pointer;
+}
+  
+.videos {
+    background-color: #F9F9F9;
+}
