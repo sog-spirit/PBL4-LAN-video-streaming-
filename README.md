@@ -1,4 +1,4 @@
-# PBL4
+# PBL4 (LAN video streaming)
 Ứng dụng kĩ thuật streaming để stream video qua giao thức HTTP
 ## Phiên bản sử dụng
 * JavaSE 15
